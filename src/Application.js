@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Grudges from './Grudges';
 import NewGrudge from './NewGrudge';
+import { GrudgeContext } from './GrudgeContext';
 
 const Application = () => {
+  const { isPast, isFuture, undo, redo } = useContext(GrudgeContext);
   return (
     <div className="Application">
       <NewGrudge />
+      <section>
+        <button className="full-width" disabled={!isPast} onClick={undo}>Undo</button>
+      </section>
+      <section>
+        <button className="full-width" disabled={!isFuture} onClick={redo}>Redo</button>
+      </section>
+
       <Grudges />
     </div>
   );

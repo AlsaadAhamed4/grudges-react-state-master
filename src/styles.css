@@ -9,8 +9,8 @@ input {
 }
 
 input {
-  padding: 0.5em;
-  border: 1px solid #f32e5b;
+  padding         : 0.5em;
+  border          : 1px solid #f32e5b;
   background-color: #fbbfcd;
 }
 
@@ -22,10 +22,10 @@ button,
 .button,
 input[type='submit'] {
   background-color: #f32e5b;
-  border: 1px solid #e10d3d;
-  color: white;
-  padding: 0.5em;
-  transition: all 0.2s;
+  border          : 1px solid #e10d3d;
+  color           : white;
+  padding         : 0.5em;
+  transition      : all 0.2s;
 }
 
 button:hover,
@@ -43,25 +43,36 @@ input[type='submit']:active {
 button.full-width,
 .button.full-width,
 input[type='submit'].full-width {
-  width: 100%;
+  width : 100%;
   margin: 1em 0;
 }
 
+button:disabled {
+  background-color: lightgrey;
+  color           : #e10d3d;
+  border          : 1px solid lightgray;
+  cursor          : not-allowed;
+}
+
+.button.full-width {
+  width: 100%;
+}
+
 .Application {
-  margin: auto;
+  margin   : auto;
   max-width: 400px;
 }
 
 .Grudges-searchTerm {
   background-color: white;
-  margin-bottom: 0.5em;
-  width: 100%;
+  margin-bottom   : 0.5em;
+  width           : 100%;
 }
 
 .Grudge {
-  border: 1px solid #f4466e;
+  border : 1px solid #f4466e;
   padding: 1em;
-  margin: 1em 0;
+  margin : 1em 0;
 }
 
 .Grudge h3 {
